@@ -104,51 +104,56 @@
   <div class="banner">
     <div class="container">
       <h2 class="h2_top_ani">Banner & poster</h2>
-      <div class="banner_imgs">
-        <div class="banner_img top_ani">
-          <img src="./images/banner1.jpg" data-img='./images/banner1_big.jpg' alt="banner1">
+      <div class="popup-gallery">
+        <a class="top_ani"
+          href="./images/banner1.jpg" title="banner_01">
+          <img src="./images/banner1.jpg" width="248" height="248">
           <div class="banner_dimm"></div>
           <i class="xi-plus-circle-o"></i>
-        </div>
-        <div class="banner_img top_ani">
-          <img src="./images/banner2.jpg" data-img='./images/banner2_big.jpg' alt="banner2">
+        </a>
+        <a class="top_ani"
+          href="./images/banner2.jpg" title="banner_02">
+          <img src="./images/banner2.jpg" width="248" height="248">
           <div class="banner_dimm"></div>
           <i class="xi-plus-circle-o"></i>
-        </div>
-        <div class="banner_img top_ani">
-          <img src="./images/banner3.jpg" data-img='./images/banner3_big.jpg' alt="banner3">
+        </a>
+        <a class="top_ani"
+          href="./images/banner3.jpg" title="banner_03">
+          <img src="./images/banner3.jpg" width="248" height="248">
           <div class="banner_dimm"></div>
           <i class="xi-plus-circle-o"></i>
-        </div>
-        <div class="banner_img top_ani">
-          <img src="./images/banner4.jpg" data-img='./images/banner4_big.jpg' alt="banner4">
+        </a>
+        <a class="top_ani"
+          href="./images/banner4.jpg" title="banner_04">
+          <img src="./images/banner4.jpg" width="248" height="248">
           <div class="banner_dimm"></div>
           <i class="xi-plus-circle-o"></i>
-        </div>
-        <div class="banner_img bottom_ani">
-          <img src="./images/banner5.jpg" data-img='./images/banner5_big.jpg' alt="banner5">
+        </a>
+        <a class="bottom_ani"
+          href="./images/banner5.jpg" title="banner_05">
+          <img src="./images/banner5.jpg" width="248" height="248">
           <div class="banner_dimm"></div>
           <i class="xi-plus-circle-o"></i>
-        </div>
-        <div class="banner_img bottom_ani">
-          <img src="./images/banner6.jpg" data-img='./images/banner6_big.jpg' alt="banner6">
+        </a>
+        <a class="bottom_ani"
+          href="./images/banner6.jpg" title="banner_06">
+          <img src="./images/banner6.jpg" width="248" height="248">
           <div class="banner_dimm"></div>
           <i class="xi-plus-circle-o"></i>
-        </div>
-        <div class="banner_img bottom_ani">
-          <img src="./images/banner7.jpg" data-img='./images/banner7_big.jpg' alt="banner7">
+        </a>
+        <a class="bottom_ani"
+          href="./images/banner7_big.jpg" title="banner_07">
+          <img src="./images/banner7_big.jpg" width="248" height="248">
           <div class="banner_dimm"></div>
           <i class="xi-plus-circle-o"></i>
-        </div>
-        <div class="banner_img bottom_ani">
-          <img src="./images/banner8.jpg" data-img='./images/banner8_big.jpg' alt="banner8">
+        </a>
+        <a class="bottom_ani"
+          href="./images/banner8.jpg" title="banner_08">
+          <img src="./images/banner8.jpg" width="248" height="248">
           <div class="banner_dimm"></div>
           <i class="xi-plus-circle-o"></i>
-        </div>
-      </div>
-    </div>
-    <div class="banner_dimm_big">
-      <img src="" alt="big_img">
+        </a>
+      </div>     
     </div>
   </div>
 
@@ -238,19 +243,38 @@
     })
 
     // banner_light_box
-    var banerItem = $('.banner_img')
-    var bannerDimm = $('.banner_dimm_big')
-     var bannerdimmImg = bannerDimm.find('img')
+    $('.popup-gallery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		tLoading: 'Loading image #%curr%...',
+		mainClass: 'mfp-img-mobile',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1] 
+		},
+		image: {
+			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+			titleSrc: function(item) {
+				return item.el.attr('title') + '<small>Portfolio banners</small>';
+			}
+		}
+	});
 
-    banerItem.click(function() {
-      var bannerdataImg = $(this).find('img').attr('data-img')
-      bannerDimm.addClass('show')
-      bannerdimmImg.attr('src', bannerdataImg)
-    })
 
-    bannerDimm.click(function() {
-      $(this).removeClass('show')
-    })
+    // var banerItem = $('.banner_img')
+    // var bannerDimm = $('.banner_dimm_big')
+    //  var bannerdimmImg = bannerDimm.find('img')
+
+    // banerItem.click(function() {
+    //   var bannerdataImg = $(this).find('img').attr('data-img')
+    //   bannerDimm.addClass('show')
+    //   bannerdimmImg.attr('src', bannerdataImg)
+    // })
+
+    // bannerDimm.click(function() {
+    //   $(this).removeClass('show')
+    // })
 
       // ui_light_box
       $(function () {
