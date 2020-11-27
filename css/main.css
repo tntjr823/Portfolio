@@ -60,7 +60,7 @@ header {
   color: #000000;
 }
 
-.header_container .abuot {
+.header_container .about {
   cursor: pointer;
   font-size: 45px;
   font-weight: bold;
@@ -68,7 +68,7 @@ header {
   position: relative;
 }
 
-.header_container .abuot::after {
+.header_container .about::after {
   content: "";
   position: absolute;
   width: 0;
@@ -81,11 +81,11 @@ header {
   transition: width 0.3s;
 }
 
-.header_container .abuot:hover::after {
+.header_container .about:hover::after {
   width: 100%;
 }
 
-.abuot_dimm {
+.about_dimm {
   position: fixed;
   top: 0;
   left: 0;
@@ -104,14 +104,14 @@ header {
   visibility: visible;
 }
 
-.abuot_box {
+.about_box {
   width: 1052px;
   height: 650px;
   border-radius: 49px;
   background: #fff;
 }
 
-.abuot_box h2 {
+.about_box h2 {
   font-size: 64px;
   font-weight: bold;
   margin-top: 34px;
@@ -121,7 +121,7 @@ header {
   position: relative;
 }
 
-.abuot_box h2::after {
+.about_box h2::after {
   content: "";
   position: absolute;
   width: 212px;
@@ -132,28 +132,28 @@ header {
   background: #b6b5b5;
 }
 
-.abuot_text {
+.about_text {
   display: flex;
   align-items: center;
   margin-bottom: 25px;
   margin-left: 135px;
 }
 
-.abuot_text img {
+.about_text img {
   margin-right: 13px;
 }
 
-.abuot_text p {
+.about_text p {
   font-size: 21px;
   color: #000000;
 }
 
-.abuot_text p span {
+.about_text p span {
   font-size: 16px;
   color: #000000;
 }
 
-.abuot_box > p {
+.about_box > p {
   font-size: 35px;
   font-weight: bold;
   margin-top: 70px;
@@ -163,7 +163,7 @@ header {
   position: relative;
 }
 
-.abuot_box > p::after {
+.about_box > p::after {
   content: "";
   position: absolute;
   width: 72px;
