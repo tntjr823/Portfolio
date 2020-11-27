@@ -74,6 +74,11 @@
 
   <!-- bg -->
   <div class="bg">
+    <div class="bg_slide">
+      <div class="item item_01"></div>
+      <div class="item item_02"></div>
+      <div class="item item_03"></div>
+    </div>
     <div class="bg_text">
       <h2>안녕하세요</h2>
       <h2>웹 디자이너 이동준의</h2>
@@ -242,6 +247,16 @@
       $(this).removeClass('show')
     })
 
+    //bg_slide
+    $('.bg_slide').slick({
+      arrows: false,
+      fade: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      pauseOnFocus: false,
+      pauseOnHover: false
+    })
+
     // banner_light_box
     $('.popup-gallery').magnificPopup({
 		delegate: 'a',
@@ -261,21 +276,6 @@
 		}
 	});
 
-
-    // var banerItem = $('.banner_img')
-    // var bannerDimm = $('.banner_dimm_big')
-    //  var bannerdimmImg = bannerDimm.find('img')
-
-    // banerItem.click(function() {
-    //   var bannerdataImg = $(this).find('img').attr('data-img')
-    //   bannerDimm.addClass('show')
-    //   bannerdimmImg.attr('src', bannerdataImg)
-    // })
-
-    // bannerDimm.click(function() {
-    //   $(this).removeClass('show')
-    // })
-
       // ui_light_box
       $(function () {
         $('.popup-modal').magnificPopup({
@@ -291,7 +291,7 @@
       });
       
       $('.slide').slick({
-        dots: true,
+        dots: true
       })
 
       // 스크롤 애니메이션

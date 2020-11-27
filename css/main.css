@@ -156,7 +156,7 @@ header {
 .abuot_box > p {
   font-size: 35px;
   font-weight: bold;
-  margin-top: 50px;
+  margin-top: 70px;
   margin-bottom: 40px;
   text-align: center;
   color: #5e5e5e;
@@ -186,10 +186,28 @@ header {
 .bg {
   width: 100%;
   height: 1024px;
-  background: url(../images/bg1.jpg) no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
+}
+
+.bg_slide .item {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg_slide .item_01 {
+  background-image: url("../images/bg1.jpg");
+}
+
+.bg_slide .item_02 {
+  background-image: url("../images/bg2.jpg");
+}
+
+.bg_slide .item_03 {
+  background-image: url("../images/bg3.jpg");
 }
 
 .bg_text {
@@ -453,6 +471,7 @@ header {
   justify-content: center;
   width: 375px;
   height: 713px;
+  position: relative;
 }
 
 .slide div {
@@ -528,7 +547,7 @@ header {
 
 .footer_container h2 {
   margin-top: 193px;
-  margin-bottom: 137px;
+  margin-bottom: 120px;
   margin-left: 320px;
   width: 250px;
   font-size: 64px;
@@ -559,15 +578,19 @@ header {
 }
 
 .footer_contents .item1 img {
-  margin-left: 94px;
+  width: 59px;
+  height: 46px;
+  margin-left: 59px;
 }
 
 .footer_contents .item2 img {
-  margin-left: 149px;
+  width: 59px;
+  height: 46px;
+  margin-left: 90px;
 }
 
 .footer_contents p {
-  font-size: 40px;
+  font-size: 25px;
 }
 
 /* bg_animatation */
